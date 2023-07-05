@@ -10,17 +10,34 @@
       crossorigin="anonymous"
     />
     <title>Failure</title>
+    <style>
+      .failure-message {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
   </head>
   <body>
-    <div class="jumbotron">
-      <div class="container">
-        <h1 class="display-4">Uh oh!</h1>
-        <p>
+    <div class="container failure-message">
+      <div
+        class="position-relative p-5 text-center text-muted bg-body border border-dashed rounded-5"
+      >
+        <img
+          class="mb-4"
+          src="./images/remove.png"
+          alt=""
+          width="72"
+          height="72"
+        />
+        <h1 class="text-body-emphasis">Uh oh!</h1>
+        <p class="col-lg-6 mx-auto mb-4">
           There was a problem signing you up. Please try again or contact the
           developer!
         </p>
         <form action="/failure" method="post">
-          <button class="btn btn-lg btn-warning" type="submit" name="button">
+          <button class="btn btn-warning px-5 mb-5" type="submit" name="button">
             Try Again
           </button>
         </form>

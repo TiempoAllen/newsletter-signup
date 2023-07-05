@@ -10,15 +10,37 @@
       crossorigin="anonymous"
     />
     <title>Success</title>
+    <style>
+      .success-message {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
   </head>
   <body>
-    <div class="jumbotron">
-      <div class="container">
-        <h1 class="display-4">Awesome!</h1>
-        <p>
+    <div class="container success-message">
+      <div
+        class="position-relative p-5 text-center text-muted bg-body border border-dashed rounded-5"
+      >
+        <img
+          class="mb-4"
+          src="./images/checked.png"
+          alt=""
+          width="72"
+          height="72"
+        />
+        <h1 class="text-body-emphasis">Awesome!</h1>
+        <p class="col-lg-6 mx-auto mb-4">
           You've been successfully signed up to the newsletter, look forwards to
           lots of awesome content!
         </p>
+        <form action="/success" method="post">
+          <button class="btn btn-success px-5 mb-5" type="submit" name="button">
+            Go back
+          </button>
+        </form>
       </div>
     </div>
   </body>

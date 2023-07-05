@@ -39,6 +39,7 @@ app.post("/", function (req, res) {
     }
 
     const request = https.request(url, options, function (response) {
+        console.log(response.statusCode);
         if (response.statusCode === 200) {
             res.sendFile(__dirname + "/success.html");
         } else {
@@ -55,6 +56,10 @@ app.post("/", function (req, res) {
 });
 
 app.post("/failure", function (req, res) {
+    res.redirect("/");
+});
+
+app.post("/success", function (req, res) {
     res.redirect("/");
 });
 
